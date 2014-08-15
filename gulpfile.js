@@ -16,7 +16,7 @@ var gulp = require('gulp');
 	// Paths
 	var paths = {
 		scss: 'assets/sass/**/*.scss',
-		scripts: 'assets/scripts/**/*.js',
+		scripts: 'assets/scripts/partials/**/*.js',
 		images: 'assets/img/**'
 	};    
     
