@@ -1,3 +1,36 @@
 // This is where you can put any styles specific to a page
 // .page is the class WordPress outputs to the body tag
+
+/* Top Banner ----------------------- */
+
+.banner {
+	padding: 2em 0;
+	background: url('../img/bg_home.jpg') no-repeat;
+	background-position: 0 -100px;
+	
+	@include bp-m {
+		background-size: 100% auto;
+	}	
+	
+	.wrap {
+		
+		@include bp-l {
+			padding-left: 300px;
+			box-sizing: border-box;
+		}
+	}
+	
+	.subtitle {
+		@include font-size(1.3125);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 8px;
+		color: $yellow;
+	}	
+	
+	p {
+		color: #fff;
+	}
+}
+
 .page {}

@@ -8,21 +8,32 @@ Font weights set as variables because sometimes there are multiple weights,
 so an example use might also be a variable of $mid-weight: 500;
 If you've just got normal and bold, you don't need the variable.
 */
+
+/* Google Fonts ---------------------------------- */
+@import url(//fonts.googleapis.com/css?family=Lato:300,400,700,400italic);
+
 $normal: normal;
 $bold: bold;
 
 html {
     font-size: 100%;
-    }
+}
 
 body {
     @include font-size(1,1.5);
-	}
+    font-family: 'Lato', Arial, sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6 {
 	@include font-size(1.5, 1.75);
+	line-height: normal;
+}
+	h1 { 
+		@include font-size(2.5, 3); 
+		color: $blue; 
+		text-transform: uppercase; 
+		font-weight: 300; 
 	}
-
     h2 {}
     h3 {}
     h4 {}
@@ -30,15 +41,18 @@ h1, h2, h3, h4, h5, h6 {
     h6 {}
 
 p {
-
-	}
+	@include font-size(.875);
+	line-height: 2em;
+}
 
 a {
 	@include hover-fade;
-
+	color: $red;
+	
 	&:hover,
     &:active {
         outline: 0;
+        color: lighten($red, 10%);
 		}
 	}
 

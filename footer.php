@@ -1,7 +1,16 @@
-<?php get_sidebar(); ?>
-
 <footer role="contentinfo">
-	<p>&copy;<?php echo date("Y"); ?> <a href="#top" title="Jump back to top">&#8593;</a></p>
+	<div class="wrap">
+        <nav role="navigation">
+            <?php
+                $args = array(
+                    'container' => 'false',
+                    'items_wrap' => '<ul>%3$s</ul>',
+                    );
+                wp_nav_menu($args);
+            ?>
+        </nav>
+        <a class="button" href="#">Contact Me</a>
+	</div>
 </footer>
 
 <?php wp_footer(); ?>

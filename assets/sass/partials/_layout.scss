@@ -44,3 +44,41 @@ figure {
 
         }
     }
+    
+article {
+	@extend %clearfix;
+}
+    
+section {
+	@extend %clearfix;
+	
+	&.primary {
+		margin: 0 0 2em;
+		
+		@include bp-l {
+			float: right;
+			width: 70%;			
+		}
+	}
+}
+
+.secondary-content {
+	
+	@include bp-l {
+		float: left;
+		width: 30%;	
+		position: relative;
+		top: -115px;
+		left: 0;
+		text-align: center;		
+	}
+}
+
+.wrap {
+	width: 95%;
+	margin: 0 auto;
+	
+	@include bp-l {
+		max-width: 960px;
+	}
+}

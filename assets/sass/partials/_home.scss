@@ -1,0 +1,152 @@
+/* ==============================================================
+	Home
+================================================================= */
+
+/* Hero --------------------------- */
+
+.hero {
+	position: relative;
+	padding: 3em 0 5em;
+	text-align: center;
+	background-position: 0 0;
+	
+	@include bp-m {
+		padding: 7.8125em 0 12em;
+	}
+	
+	h1 {
+		margin: .125em 0 .375em;
+		letter-spacing: 18px;
+		color: #fff;
+		font-weight: 400;
+		
+		@include bp-l {
+			@include font-size(3.4375);		
+			letter-spacing: 25px;
+		}
+	}
+	
+	p {
+		margin: 0 auto;
+		color: #fff;
+		
+		@include bp-l {
+			width: 50%;
+		}
+	}
+}
+
+/* Social -------------------------- */
+
+.social {
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	list-style: none;
+	text-align: center;
+}
+
+/* Bio Section --------------------- */
+
+.bio {
+	padding: 3.5em 0 0;
+	
+	.wrap {
+		position: relative;
+	}
+	
+	.profile-img {
+		position: absolute;
+		left: 50%;
+		top: -115px;
+		margin-left: -115px;
+	}
+	
+	.bio-buttons {
+		margin: 0 0 7em;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		
+		li {
+			display: inline-block;
+			
+			&:first-child {
+				margin-right: 350px;
+			}
+			
+			.button {	
+				display: block;
+				width: 150px;
+				border-color: #c8c8c8;
+			}
+		}
+	}
+	
+	h1 {
+		text-align: center;
+	}
+	
+	p {
+		display: inline-block;
+		text-align: justify;	
+		
+		@include bp-m {
+			float: left;	
+			width: 48%;
+		}
+		
+		+ p {
+			
+			@include bp-m {		
+				float: right;	
+			}
+		}
+	}
+	
+}
+
+/* Papers Section ----------------- */
+
+.papers {
+	padding: 3em 0;
+	text-align: center;
+	background: #d9d9d9;
+	
+	h1 {
+		color: $darkblue;
+	}
+	
+	ul {
+		margin: 0 0 2em;
+		padding: 0;
+		list-style: none;
+	}
+	
+	li {
+		
+		@include bp-l {
+			display: inline-block;
+			width: 45%;
+			margin: 0 1.5%;
+		}
+		
+		@include bp-xl {
+			width: 30%;
+		}
+		
+		h3 {
+			margin-bottom: 0;
+			font-weight: 400;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+	}
+	
+	.button {
+		display: inline-block;
+		width: 150px;
+	}
+}

@@ -1,0 +1,50 @@
+/* ==============================================================
+	Global UI Elements
+================================================================= */
+
+/* Buttons ----------------------------- */
+
+.button {
+	padding: .75em 1em;
+	border: 2px solid $blue;
+	border-radius: 32px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $blue;
+	
+	&:hover {
+		background: $blue;
+		color: #fff;
+	}
+}
+
+/* Navigation ------------------------- */
+
+nav {
+	
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	li {
+		
+		@include bp-l {
+			float: left;	
+		}
+	}
+	
+	a {
+		display: block;
+		@include font-size(.875);
+		letter-spacing: 1px;
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+		
+		&::after {
+			content:".";
+		}
+	}
+}

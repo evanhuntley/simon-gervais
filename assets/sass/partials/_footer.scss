@@ -1,0 +1,44 @@
+/* ==============================================================
+	Footer
+================================================================= */
+
+footer {
+	padding: 1.5em 0;
+	background: $darkblue;
+	@extend %clearfix;
+	
+	nav {
+		margin: 0 0 1em;
+		
+		@include bp-l {
+			float: left;
+			margin: 1em 0 0;
+		}
+		
+		ul {
+			list-style: none;
+		}
+		
+		li {
+			margin: 0 0 1em;
+			text-align: center;
+			
+			@include bp-l {
+				margin: 0 3.5em 0 0;
+			}
+		}
+	}
+	
+	.button {
+		display: block;
+		width: 200px;
+		margin: 0 auto;
+		text-align: center;
+		color: #fff;
+		border-color: #2d2e36;
+		
+		@include bp-l {
+			float: right;
+		}
+	}
+}
