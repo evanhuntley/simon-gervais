@@ -1,0 +1,43 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<i class="icon-home"></i>
+```
+*/
+.icon-email-color {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px 0px;
+  width: 54px;
+  height: 53px;
+}
+.icon-email {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px -53px;
+  width: 54px;
+  height: 53px;
+}
+.icon-linkedin-color {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px -212px;
+  width: 54px;
+  height: 54px;
+}
+.icon-linkedin {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px -266px;
+  width: 54px;
+  height: 54px;
+}
+.icon-twitter-color {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px -106px;
+  width: 54px;
+  height: 53px;
+}
+.icon-twitter {
+  background-image: url(../img/icon-sprite.png);
+  background-position: 0px -159px;
+  width: 54px;
+  height: 53px;
+}

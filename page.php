@@ -1,11 +1,21 @@
-<?php get_header(); ?>
+<?php 
+	get_header(); 
+	
+	$banner_title = types_render_field("banner_title", array('raw' => true));
+	$banner_content = types_render_field("banner_content", array('raw' => true));
+		
+?>
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 	<section class="banner">
 		<div class="wrap">
-			<h2 class="subtitle">Teaching is my passion</h2>
-			<p>Teaching to me is like roin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellu.</p>
+			<?php if ( $banner_title ) : ?>
+			<div class="intro">
+				<h2 class="subtitle"><?php echo $banner_title; ?></h2>
+				<p><?php echo $banner_content; ?></p>
+			</div>
+			<?php endif; ?>
 		</div>
 	</section>
 

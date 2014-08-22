@@ -16,7 +16,7 @@
 	
 	h1 {
 		margin: .125em 0 .375em;
-		letter-spacing: 18px;
+		letter-spacing: 10px;
 		color: #fff;
 		font-weight: 400;
 		
@@ -33,23 +33,71 @@
 		@include bp-l {
 			width: 50%;
 		}
+		
+		@include bp-xl {
+			width: 70%;
+		}
 	}
-}
-
-/* Social -------------------------- */
-
-.social {
-	position: absolute;
-	right: 1em;
-	top: 50%;
-	list-style: none;
-	text-align: center;
+	
+	/* Social -------------------------- */
+	
+	.social {
+		margin: 2em 0 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		
+		@include bp-l {
+			position: absolute;
+			right: 1em;
+			top: 33%;
+		}
+		
+		li {
+			display: inline-block;
+			margin: 0 .25em;
+			
+			@include bp-l {
+				display: block;
+				margin: 0 0 .5em;
+			}
+		}
+		
+		a {
+			display: block;
+			@extend %ir;
+			transition: none;
+		}
+		
+		.icon-linkedin {
+			
+			&:hover {
+				background-position: 0px -212px;
+			}
+		}
+		
+		.icon-twitter {
+			
+			&:hover {
+				background-position: 0px -106px;
+			}
+		}
+		
+		.icon-email {
+			
+			&:hover {
+				background-position: 0px 0px;
+			}
+		}
+	}
 }
 
 /* Bio Section --------------------- */
 
 .bio {
-	padding: 3.5em 0 0;
+	padding: 3.5em 0 6.5em;
+	background: url('../img/l_sg-gray.png') no-repeat;
+	background-position: bottom 32px center;
 	
 	.wrap {
 		position: relative;
@@ -63,16 +111,26 @@
 	}
 	
 	.bio-buttons {
-		margin: 0 0 7em;
-		padding: 0;
+		margin: 0;
+		padding: 8em 0 0;
 		list-style: none;
 		text-align: center;
 		
+		@include bp-l {
+			margin: 0 0 7em;
+			padding: 0;
+		}
+		
 		li {
 			display: inline-block;
+			margin: 0 0 1em;
 			
-			&:first-child {
-				margin-right: 350px;
+			@include bp-l {
+				margin: 0;
+				
+				&:first-child {
+					margin-right: 350px;
+				}
 			}
 			
 			.button {	
@@ -100,6 +158,38 @@
 			
 			@include bp-m {		
 				float: right;	
+			}
+		}
+	}
+	
+	.bio-links {
+		float: left;
+		width: 100%;
+		margin: 2em 0;
+		padding: 0;
+		text-align: center;
+		
+		li {
+			display: inline-block;
+			padding: 0 .5em;
+			border-right: 1px solid $gray;
+			@include font-size(.875);
+			line-height: .875em;
+			font-weight: 700;			
+			
+			&:last-child {
+				border-right: none;
+			}
+		}
+		
+		a {
+			text-transform: uppercase;
+			color: $gray;
+			text-decoration: none;
+			
+			&:hover {
+				color: $red;
+				text-decoration: underline;
 			}
 		}
 	}

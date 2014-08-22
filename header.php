@@ -45,6 +45,7 @@
     <header role="banner">
 		<div class="wrap">
 	        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="logo"><?php bloginfo( 'name' ); ?></a>
+	        <button class="nav-toggle">Menu</button>
 	        <nav role="navigation">
 	            <?php
 	                $args = array(

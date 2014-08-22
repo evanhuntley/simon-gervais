@@ -12,6 +12,7 @@ var gulp = require('gulp');
 	    livereload = require('gulp-livereload');
 	    uglify = require('gulp-uglify');
 	    imagemin = require('gulp-imagemin');
+	    spritesmith = require('gulp.spritesmith');
     
 	// Paths
 	var paths = {
@@ -45,6 +46,23 @@ var gulp = require('gulp');
 		return gulp.src(paths.images)
 		.pipe(imagemin())
 		.pipe(gulp.dest('assets/img'));
+	});
+	
+	// Icon Sprite
+	gulp.task('sprite', function () {
+	  var spriteData = gulp.src(paths.images+'/icons/*.png').pipe(spritesmith({
+	    imgName: 'icon-sprite.png',
+	    cssName: 'partials/_icons.scss',
+	    cssFormat: 'css',
+	    imgPath: '../img/icon-sprite.png',
+	    cssOpts: {
+	      cssClass: function (item) {
+	        return '.' + item.name;
+	      }
+	    }
+	  }));
+	  spriteData.img.pipe(gulp.dest('assets/img/'));
+	  spriteData.css.pipe(gulp.dest('assets/sass/'));
 	});
 	
 	//Clean
